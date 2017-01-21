@@ -160,7 +160,7 @@ In case of trouble caused by =use-package=, you can try to load =oreg-plus-contr
 
 ** /projectile/: project interaction library
 
-#+BEGIN_SRC emacs-lisp 
+#+BEGIN_SRC disable-emacs-lisp 
 (use-package projectile
   :demand
   :init   (setq projectile-use-git-grep t)
@@ -171,7 +171,7 @@ In case of trouble caused by =use-package=, you can try to load =oreg-plus-contr
 
 ** /undo-tree/: recovers any past state of a buffer
 
-#+BEGIN_SRC emacs-lisp 
+#+BEGIN_SRC disable-emacs-lisp 
 (use-package undo-tree
   :diminish undo-tree-mode
   :config (global-undo-tree-mode)
@@ -180,7 +180,7 @@ In case of trouble caused by =use-package=, you can try to load =oreg-plus-contr
 
 ** /highlight-symbol/: highlight and navigate between symbols
 
-#+BEGIN_SRC emacs-lisp 
+#+BEGIN_SRC disable-emacs-lisp 
 (use-package highlight-symbol
   :diminish highlight-symbol-mode
   :commands highlight-symbol
@@ -189,7 +189,7 @@ In case of trouble caused by =use-package=, you can try to load =oreg-plus-contr
 
 ** /goto-chg/: goto last change in current buffer
 
-#+BEGIN_SRC emacs-lisp 
+#+BEGIN_SRC disable-emacs-lisp 
 (use-package goto-chg
   :commands goto-last-change
   ;; complementary to
@@ -201,7 +201,7 @@ In case of trouble caused by =use-package=, you can try to load =oreg-plus-contr
    
 ** /company/: "complete anything" in-buffer completion
 
-#+BEGIN_SRC emacs-lisp 
+#+BEGIN_SRC disable-emacs-lisp 
 (use-package company
   :diminish company-mode
   :commands company-mode
@@ -220,7 +220,7 @@ In case of trouble caused by =use-package=, you can try to load =oreg-plus-contr
 
 ** /yasnippet/: template system
 
-#+BEGIN_SRC emacs-lisp 
+#+BEGIN_SRC disable-emacs-lisp 
 (use-package yasnippet
   :diminish yas-minor-mode
   :commands yas-minor-mode
@@ -229,7 +229,7 @@ In case of trouble caused by =use-package=, you can try to load =oreg-plus-contr
 
 ** /yatemplate/: expands abbreviations into function templates
 
-#+BEGIN_SRC emacs-lisp 
+#+BEGIN_SRC disable-emacs-lisp 
 (use-package yatemplate
   :defer 2 ;; WORKAROUND https://github.com/mineo/yatemplate/issues/3
   :config
@@ -240,7 +240,7 @@ In case of trouble caused by =use-package=, you can try to load =oreg-plus-contr
 
 ** /smartparens/: deals with parens pairs in smart ways
 
-#+BEGIN_SRC emacs-lisp 
+#+BEGIN_SRC disable-emacs-lisp 
 (use-package smartparens
   :diminish smartparens-mode
   :commands
@@ -264,7 +264,7 @@ In case of trouble caused by =use-package=, you can try to load =oreg-plus-contr
 
 ** /helm/: incremental completion and selection narrowing
 
-#+BEGIN_SRC emacs-lisp 
+#+BEGIN_SRC disable-emacs-lisp 
 (use-package helm
   :diminish helm-mode
   :commands (helm-mode helm-M-x helm-find-files)
@@ -274,7 +274,7 @@ In case of trouble caused by =use-package=, you can try to load =oreg-plus-contr
 
 ** /neotree/: tree natigation sidebar
 
-#+BEGIN_SRC emacs-lisp 
+#+BEGIN_SRC disable-emacs-lisp 
 (use-package neotree
   :defer 2
   :diminish neotree
@@ -285,7 +285,7 @@ In case of trouble caused by =use-package=, you can try to load =oreg-plus-contr
 
 ** /magit/: a powerful frontend for Git
 
-#+BEGIN_SRC emacs-lisp 
+#+BEGIN_SRC disable-emacs-lisp 
 (use-package magit
   :diminish magit-status
   :commands magit-status
@@ -295,7 +295,7 @@ In case of trouble caused by =use-package=, you can try to load =oreg-plus-contr
 
 ** /monky/: a powerful frontend for Mercurial/Hg
 
-#+BEGIN_SRC emacs-lisp 
+#+BEGIN_SRC disable-emacs-lisp 
 (use-package monky
   :diminish monky-status
   :commands monky-status
@@ -305,7 +305,7 @@ In case of trouble caused by =use-package=, you can try to load =oreg-plus-contr
 
 ** /gist/ shares snippets and pastes
 
-#+BEGIN_SRC emacs-lisp 
+#+BEGIN_SRC disable-emacs-lisp 
 (use-package gist
   :diminish gist-list
   :commands (gist-list gist-region-or-buffer)
@@ -315,7 +315,7 @@ In case of trouble caused by =use-package=, you can try to load =oreg-plus-contr
   
 ** /find-file-in-repository/ find files in the source control
 
-#+BEGIN_SRC emacs-lisp 
+#+BEGIN_SRC disable-emacs-lisp 
 (use-package find-file-in-repository
   :diminish find-file-in-repository
   :commands find-file-in-repository
@@ -324,33 +324,33 @@ In case of trouble caused by =use-package=, you can try to load =oreg-plus-contr
 
 ** /multiple-cursors/: edit multiple places of a buffer at once
 
-#+BEGIN_SRC emacs-lisp 
+#+BEGIN_SRC disable-emacs-lisp 
 (use-package multiple-cursors)
 #+END_SRC
 
 ** /window-numbering/: assign numbers to windows for quick access
 
-#+BEGIN_SRC emacs-lisp 
+#+BEGIN_SRC disable-emacs-lisp 
 (use-package window-numbering
   :init (window-numbering-mode 1))
 #+END_SRC
 
 ** /expand-region/: increase selected region by semantic units
 
-#+BEGIN_SRC emacs-lisp 
+#+BEGIN_SRC disable-emacs-lisp 
 (use-package expand-region
   :bind ("C-=" . er/expand-region))
 #+END_SRC
   
 ** /monokai-theme/: a dark colour theme
 
-#+BEGIN_SRC emacs-lisp 
+#+BEGIN_SRC disable-emacs-lisp 
 (use-package monokai-theme
   :config (load-theme 'monokai t)
   :init (setq frame-background-mode 'dark))
 #+END_SRC
 ** Configure programming language modes
- #+BEGIN_SRC emacs-lisp
+ #+BEGIN_SRC disable-emacs-lisp
  (use-package scala-mode
    :commands scala-mode)
 
@@ -374,10 +374,10 @@ In case of trouble caused by =use-package=, you can try to load =oreg-plus-contr
 
  - [ ] borrow ideas from https://github.com/frgomes/emacs-for-scala
  - [ ] review the code below
-#+BEGIN_SRC emacs-lisp
+#+BEGIN_SRC disable-emacs-lisp
  ;(require 'rainbow-delimiters)
  ;(add-hook 'scala-mode-hook #'rainbow-delimiters-mode)
- ;(add-hook 'emacs-lisp-mode-hook #'rainbow-delimiters-mode)
+ ;(add-hook 'disable-emacs-lisp-mode-hook #'rainbow-delimiters-mode)
 
  ;(add-hook 'scala-mode-hook #'smartparens-mode)
  ;(add-hook 'typescript-mode-hook #'smartparens-mode)
@@ -385,7 +385,7 @@ In case of trouble caused by =use-package=, you can try to load =oreg-plus-contr
 #+END_SRC
 
 ** TODO [0/2] Configure IDE environment for Typescript
-#+BEGIN_SRC emacs-lisp
+#+BEGIN_SRC disable-emacs-lisp
  (use-package tide
    :commands tide-setup tide-mode setup-tide-mode
    :config
@@ -465,12 +465,12 @@ company-tide
 
  CUA selection mode is handy for highlighting rectangular regions properly.
 
- #+BEGIN_SRC emacs-lisp
+ #+BEGIN_SRC disable-emacs-lisp
  (cua-selection-mode t)
  #+END_SRC
 
 *** Configuring keybindings
- #+BEGIN_SRC emacs-lisp
+ #+BEGIN_SRC disable-emacs-lisp
  ;; keybinding for multiple-cursors
  (require 'sgml-mode)
  (global-set-key (kbd "C-` <right>")  'mc/mark-next-like-this)
@@ -482,12 +482,12 @@ company-tide
  (global-set-key (kbd "C-|")  'toggle-truncate-lines)
  #+END_SRC
 *** General defaults
-#+BEGIN_SRC emacs-lisp
+#+BEGIN_SRC disable-emacs-lisp
 (setq-default indent-tabs-mode nil)
 #+END_SRC
 ** TODO [0/2] Configure additional Org Mode modules
 *** Support for multiple agendas
- #+BEGIN_SRC emacs-lisp
+ #+BEGIN_SRC disable-emacs-lisp
  (require 'org-agenda)
  (global-set-key (kbd "C-c a") 'org-agenda)
  (setq org-agenda-files (list-file-contents "~/Documents/org-mode/agenda"))
@@ -495,7 +495,7 @@ company-tide
 
 *** Support for /org-index/
 
-#+BEGIN_SRC emacs-lisp
+#+BEGIN_SRC disable-emacs-lisp
  (require 'org-index)
  (global-set-key (kbd "C-c i") 'org-index)
 #+END_SRC
@@ -503,7 +503,7 @@ company-tide
 
 - [ ] See: https://www.gnu.org/software/emacs/manual/html_node/org/Capture.html
 
-#+BEGIN_SRC emacs-lisp
+#+BEGIN_SRC disable-emacs-lisp
  ;(require 'org-capture)
  ;(global-set-key (kbd "C-c c") 'org-capture)
 #+END_SRC
@@ -531,7 +531,7 @@ company-tide
 
  - [ ] See: https://www.youtube.com/watch?v=vO_RF2dK7M0
 
- #+BEGIN_SRC emacs-lisp
+ #+BEGIN_SRC disable-emacs-lisp
  ;; runs configuration for org files, if any.
  ;; see: http://cestlaz.github.io/posts/using-emacs-26-gcal
  ;; credits: Mike Zamansky
@@ -541,6 +541,6 @@ company-tide
 
 ** Prologue
 
- #+BEGIN_SRC emacs-lisp
+ #+BEGIN_SRC disable-emacs-lisp
  (message "Initialization complete.")
  #+END_SRC
